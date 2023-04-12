@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title | safeHTML }}</title>
+</head>
+<body>
+  <nav>
+  {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}">{{ .Name | safeHTML }}</a>
+  {{ end }}
+  </nav>
+  <main>
+    {{- block "main" . }}{{- end }}
+  </main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <section>
+    {{ .Content }}
+  </section>
+  {{ range .Pages.ByPublishDate.Reverse }}
+    <article class="list">
+      <h2>
+        <a href="{{ .RelPermalink }}">{{ .Title | safeHTML }}</a>
+      </h2>
+      <summary>{{ .Summary | truncate 50 | safeHTML }}</summary>
+    </article>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,14 @@
+baseURL: http://localhost
+menu:
+  main:
+    - name: Start
+      pageRef: /
+      weight: 10
+    - name: Items
+      pageRef: /items
+      weight: 20
+disableKinds:
+  - RSS
+  - sitemap
+  - taxonomy
+  - term
